@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int maxProfit(std::vector<int>& prices) {
+    int maxProfit(vector<int>& prices) {
     int minPrice = INT_MAX;
     int maxProfit = 0;
 
@@ -8,7 +8,7 @@ public:
         if (price < minPrice) {
             minPrice = price; 
         } else {
-            maxProfit = std::max(maxProfit, price - minPrice); 
+            maxProfit = max(maxProfit, price - minPrice); 
         }
     }
 
