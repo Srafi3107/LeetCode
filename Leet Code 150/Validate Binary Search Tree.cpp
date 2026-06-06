@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool isValid(TreeNode* root) {
+    bool isValidBST(TreeNode* root) {
         return validate(root, LONG_MIN, LONG_MAX);
     }
 
