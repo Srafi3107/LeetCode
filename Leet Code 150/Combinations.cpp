@@ -1,4 +1,4 @@
-Solution {
+Class Solution {
 public:
     vector<vector<int>> ans;
 
