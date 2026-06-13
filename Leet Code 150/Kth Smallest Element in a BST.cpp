@@ -1,20 +1,25 @@
-class Solution:
-    def kthSmallest(self, root, k):
-        self.k = k
-        self.ans = None
+class Solution {
+public:
+    int ans;
+    int k;
 
-        def inorder(node):
-            if not node or self.ans is not None:
-                return
+    void inorder(TreeNode* root) {
+        if (!root) return;
 
-            inorder(node.left)
+        inorder(root->left);
 
-            self.k -= 1
-            if self.k == 0:
-                self.ans = node.val
-                return
+        k--;
+        if (k == 0) {
+            ans = root->val;
+            return;
+        }
 
-            inorder(node.right)
+        inorder(root->right);
+    }
 
-        inorder(root)
-        return self.ans
+    int kthSmallest(TreeNode* root, int k) {
+        this->k = k;
+        inorder(root);
+        return ans;
+    }
+};
