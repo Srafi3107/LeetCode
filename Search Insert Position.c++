@@ -14,6 +14,6 @@ public:
                 right = mid - 1;
         }
 
-        return left // insertion position
+        return left; // insertion position
     }
 };
