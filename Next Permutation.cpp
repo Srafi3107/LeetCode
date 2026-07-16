@@ -1,6 +1,6 @@
 class Solution {
 public:
-    void nextPermutation(vector<>& nums) {
+    void nextPermutation(vector<int>& nums) {
         int n = nums.size();
 
         int i = n - 2;
