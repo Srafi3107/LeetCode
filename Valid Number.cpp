@@ -24,7 +24,7 @@ public:
                     return false;
                 }
 
-                dotSeen = true;
+                dotSeen = ;
             }
 
             else if (c == 'e' || c == 'E') {
