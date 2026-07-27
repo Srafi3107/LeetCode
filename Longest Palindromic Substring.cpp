@@ -1,7 +1,3 @@
-#include <iostream>
-#include <string>
-using namespace std;
-
 class Solution {
 public:
     string longestPalindrome(string s) {
@@ -11,10 +7,8 @@ public:
         int start = 0, maxLen = 1;
 
         for (int i = 0; i < n; i++) {
-            // Odd length palindrome
             expand(s, i, i, start, maxLen);
 
-            // Even length palindrome
             expand(s, i, i + 1, start, maxLen);
         }
 
@@ -33,10 +27,3 @@ private:
         }
     }
 };
-
-int main() {
-    Solution sol;
-    string s = "babad";
-    cout << sol.longestPalindrome(s) << endl; // "bab" or "aba"
-    return 0;
-}
