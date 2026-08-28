@@ -1,16 +1,16 @@
 class Solution {
 public:
     string countAndSay(int n) {
-        string s = "1";
+        string str = "1";
 
         for (int i = 1; i < n; i++) {
             string next = "";
 
-            for (int j = 0; j < s.size(); ) {
+            for (int j = 0; j < str.size(); ) {
                 int count = 0;
-                char ch = s[j];
+                char ch = str[j];
 
-                while (j < s.size() && s[j] == ch) {
+                while (j < str.size() && str[j] == ch) {
                     count++;
                     j++;
                 }
@@ -18,9 +18,9 @@ public:
                 next += to_string(count) + ch;
             }
 
-            s = next;
+            str = next;
         }
 
-        return s;
+        return str;
     }
 };
